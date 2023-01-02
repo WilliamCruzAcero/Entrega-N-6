@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Conectar a Bootstrap via CDN  -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <title>Mi aplicación con Sockets</title>
+</head>
+<body>
+    <body>
+        <div class="container mt-3">
+            <div class="jumbotron">
+                <h1 style="color:black mt-3;"></h1>
+                <br/>
+    
+                <form >
+    
+                    <div class="form-group">
+                        <label for="nombre"><b>Nombre</b></label>
+                        <input type="text" id="nombre" class="form-control" name="nombre">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="precio"><b>Precio</b></label>
+                        <input type="number" id="precio" class="form-control" name="precio">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="imagen"><b>Imagen</b></label>
+                        <input type="url" id="imagen" class="form-control" name="imagen">
+                    </div>
+    
+                    <button class="btn btn-success mt-3 mb-5" >Enviar</button>
+                    <p></p>
+                </form>
+    
+                <h2 style="color:blue;">Historial de Productos</h2> 
+                
+                
+            </div> 
+        </div>
+            <div class="table-resposive">
+               <table class="table table-dark">
+                    <tr style="color: tomato;">
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                    </tr>
+                        <tr>
+                            <td>producto.nombre</td>
+                            <td>producto.precio</td>
+                            <td>producto.imagen</td>
+                        </tr>
+                          
+                </table>  
+            </div>
+            <script src="js/main.js"></script>
+   </body>
+    
+<!-- <h1>Cliente Websocket</h1>
+
+
+    <input type="text">
+    <button>Enviar</button>
+    <p></p>
+
+    <script src="js/main.js"></script>
+
+</body>  -->
+</html>
